@@ -6,17 +6,20 @@ import java.util.Scanner;
 public class Start {
     public static void main(String[] args) {
 
-        System.out.println("-----------Starting---------------------");
+        System.out.println("---------------Starting---------------------");
+
+        House house = new House();
 
         System.out.println("Type your values here: ");
 
         Scanner scanner = new Scanner(System.in);
 
-        House house = new House();
         int floors = scanner.nextInt();
         scanner.nextLine();
         String address = scanner.nextLine();
         String [] residents = scanner.nextLine().split(",");
+
+        System.out.println("Wait, values processing...");
 
         house.setFloorsNumber(floors);
         house.setAddress(address);
