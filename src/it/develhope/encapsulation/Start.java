@@ -1,30 +1,34 @@
 package it.develhope.encapsulation;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Start {
     public static void main(String[] args) {
 
-        System.out.println("-----Creating a new house--------------------");
+        System.out.println("-----------Starting---------------------");
+
+        System.out.println("Type your values here: ");
+
+        Scanner scanner = new Scanner(System.in);
 
         House house = new House();
+        int floors = scanner.nextInt();
+        scanner.nextLine();
+        String address = scanner.nextLine();
+        String [] residents = scanner.nextLine().split(",");
 
-        house.setFloorsNumber(3);
-        String floors = String.format("The house has this number of floors: %d", house.getFloorsNumber());
-        System.out.println(floors);
+        house.setFloorsNumber(floors);
+        house.setAddress(address);
+        house.setResidentsNames(residents);
 
-        System.out.println("----------------------------------------------");
+        System.out.printf("The house has %d floors %n", house.getFloorsNumber());
+        System.out.printf("The house is at the address %s %n", house.getAddress());
+        System.out.printf("The house residents are %s %n", Arrays.toString(house.getResidentsNames()));
 
-        house.setAddress("Via Libertà, 87");
-        String address = String.format("The house is at the address %s", house.getAddress());
-        System.out.println(address);
+        scanner.close();
 
-        System.out.println("----------------------------------------------");
+        System.out.println("------------------------------------------");
 
-        house.setResidentNames(new String[]{"Alessandro", "Marco", "Fabrizio"});
-        String residents = String.format("The house residents are %s, %s and %s", house.getResidentNames());
-        System.out.println(residents);
-
-
-        System.out.println("-----------------------------------------------");
     }
 }
-

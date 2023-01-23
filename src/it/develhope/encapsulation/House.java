@@ -1,9 +1,10 @@
 package it.develhope.encapsulation;
 
 public class House {
-private int floorsNumber;
-private String address;
-private String[] residentNames;
+    private int floorsNumber;
+    private String address;
+    private String [] residentsNames;
+
 
     public int getFloorsNumber() {
         return floorsNumber;
@@ -21,11 +22,11 @@ private String[] residentNames;
         this.address = address;
     }
 
-    public String[] getResidentNames() {
-        return residentNames;
+    public String[] getResidentsNames() {
+        return residentsNames;
     }
 
-    public void setResidentNames(String[] residentNames) {
-        this.residentNames = residentNames;
+    public void setResidentsNames(String[] residentsNames) {
+        this.residentsNames = residentsNames;
     }
 }
